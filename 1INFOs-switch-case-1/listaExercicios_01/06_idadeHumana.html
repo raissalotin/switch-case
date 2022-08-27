@@ -8,11 +8,37 @@
     // - cães grandes: fator 7.
 
     // ENTRADA
-
+    const idade = parseInt(prompt("qual a idade dele"));
+    const porte = prompt(" P - pequeno, M - medio ou G - grande");
+    let resultado;
+    switch (porte) {
+        case "P":
+            resultado = 5;
+            break;
+        case "M":
+            resultado = 6;
+            break;
+        case "G":
+            resultado = 7;
+            break;
+        default:
+            resultado = 0;
+            break;
+    }
+const idadeFinal = idade * resultado;
     
-    // PROCESSAMENTO
+switch (idadeFinal) {
+    case 0 :
+        document.write("porte do animal incorreto");
+        break;
 
-    
-    // SAÍDA
+    default:
+        document.write(`a idade final é ${idadeFinal}!`)
+        break;
+}
 
-    </script>
+
+
+
+// SAÍDA
+</script>
