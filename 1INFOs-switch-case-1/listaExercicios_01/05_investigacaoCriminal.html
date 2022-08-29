@@ -10,11 +10,31 @@
     */
 
     //ENTRADA
-
-    
+    const telefonou = parseInt(prompt("Telefonou para a vítima?(0-nao|1-sim)"))
+    const esteveNoLocal = parseInt(prompt("Esteve no local do crime? (0-nao|1-sim)"))
+    const moraPerto = parseInt(prompt("Mora perto da vítima?(0-nao|1-sim)"))
+    const devia = parseInt(prompt("Devia para a vítima?(0-nao|1-sim)"))
+    const trabalhou = parseInt(prompt("Já trabalhou com a vítima?(0-nao|1-sim)"))
     //PROCESSAMENTO
+    const crimePontuação = telefonou + esteveNoLocal + moraPerto + devia + trabalhou
+    let resultado
 
-    
+    switch (crimePontuação) {
+        case 0:
+        case 1:
+            resultado = "inocente!"
+            break;
+        case 2:
+            resultado = "suspeita!"
+            break;
+        case 3:
+        case 4:
+            resultado = "cúmplice!"
+            break;
+        case 5:
+            resultado = "assassino!"
+            break;
+    }
     //SAÍDA
-
+    alert(resultado)
 </script>

@@ -4,27 +4,17 @@
     */
 
     //ENTRADA
-    const numeroEscolhido = parseInt(prompt("informe o numero"))
-    let numero
+    const numeroEscolhido = parseInt(prompt("informe o numero"));
+    let numero;
+    let resultado = numero % 2;
     //PROCESSAMENTO
-    switch (numeroEscolhido) {
-        case 1:
-        case 3:
-        case 5:
-        case 7:
-        case 9:
-            numero = "esse numero é impar"
+    switch (resultado) {
+        case 0:
+            numero = "par";
             break;
-        case 2:
-        case 4:
-        case 6:
-        case 8:
-        case 10:
-            numero = "esse numero é par"
-break;
         default:
-           numero = "invalido"
-        break;
+           numero = "impar"
+           break;
     }
 
     //SAÍDA
