@@ -5,10 +5,63 @@
     */
 
     //ENTRADA
-
+    const hemisferio = prompt("em qual hemisferio está? (N-Norte |S-Sul)");
+    const mesDoAno = parseInt(prompt("que mes está?(informe o numero do mes)"));
+    let resultado
     //PROCESSAMENTO
+    switch (hemisferio) {
+        case "N":
+            switch (mesDoAno) {
+                case 1:
+                case 2:
+                case 3:
+                    resultado = "inverno"
+                    break;
+                case 4:
+                case 5:
+                case 6:
+                    resultado = "primavera"
+                    break;
 
-    
+                case 7:
+                case 8:
+                case 9:
+                    resultado = "verao"
+                    break;
+                case 10:
+                case 11:
+                case 12:
+                    resultado = "outono"
+                    break;
+            }
+            break;
+        case "S":
+            switch (mesDoAno) {
+                case 1:
+                case 2:
+                case 3:
+                    resultado = "verao"
+                    break;
+                case 4:
+                case 5:
+                case 6:
+                    resultado = "outono"
+                    break;
+
+                case 7:
+                case 8:
+                case 9:
+                    resultado = "inverno"
+                    break;
+                case 10:
+                case 11:
+                case 12:
+                    resultado = "primavera"
+                    break;
+            }
+            break;
+    }
+
     //SAÍDA
-
+    document.write(`a estacao é ${resultado}`)
 </script>
